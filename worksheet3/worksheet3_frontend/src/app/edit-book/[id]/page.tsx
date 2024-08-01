@@ -1,6 +1,6 @@
 'use client'
 
-import UpdateBookInfo from "@../components/UpdateBookInfo";
+import UpdateBookInfo from "../../../components/UpdateBookInfo";
 
 export default function ShowBook(){
     return(
