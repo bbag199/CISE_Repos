@@ -3,7 +3,7 @@ name: CI_action
 on:
   push:
     paths:
-      - worksheet4/frontend
+      - worksheet4/frontend/**
     branches: [main]
   pull_request:
     branches: [main]
