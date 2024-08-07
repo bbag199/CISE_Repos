@@ -4,14 +4,14 @@ import NavDropdown from "./nav/NavDropdown";
 import NavItem from "./nav/NavItem";
 
 const PopulatedNavBar = () => {
-    return(
+    return (
         <NavBar>
             <NavItem>SPEED</NavItem>
             <NavItem route="/" end>
                 Home
             </NavItem>
             <NavItem dropdown route="/articles">
-                Articles <IoMdArrowDropdown/>
+                Articles <IoMdArrowDropdown />
                 <NavDropdown>
                     <NavItem route="/articles">View articles</NavItem>
                     <NavItem route="/articles/new">Submit new</NavItem>

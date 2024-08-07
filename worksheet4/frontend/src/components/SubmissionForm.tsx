@@ -1,32 +1,29 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function SubmissionForm(){
-    const {register, handleSubmit} = useForm();
+export default function SubmissionForm() {
+    const { register, handleSubmit } = useForm();
 
-    const onSubmit = (date:any) => JSON.stringify(date);
+    const onSubmit = (data: any) => JSON.stringify(data);
 
-    return(
+    return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("title")} placeholder="Title" />
-            <p>
+            <p></p>
             <input {...register("authors")} placeholder="Authors" />
-            </p>
-            <p>
+            <p></p>
             <input {...register("source")} placeholder="Source" />
-            </p>
-            <p>
+            <p></p>
             <input {...register("pubyear")} placeholder="Publication Year" />
-            </p>
-            <p>
+            <p></p>
             <input {...register("doi")} placeholder="DOI" />
-            </p>
+            <p></p>
             <select {...register("linked_discussion")}>
-            <option value="">Select SE practice...</option>
-            <option value="TDD">TDD</option>
-            <option value="Mob Programming">Mob Programmin</option>
+                <option value="">Select SE practice...</option>
+                <option value="TDD">TDD</option>
+                <option value="Mob Programming">Mob Programming</option>
             </select>
             <input type="submit" />
-            </form>
-        );
+        </form>
+    );
 }

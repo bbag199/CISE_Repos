@@ -1,31 +1,75 @@
-.form{
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333333;
+  }
+  
+  nav {
+    background-color: #00008B; 
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    max-width: 30em;
-}
-
-.formItem {
-    padding: 1em;
-    margin: 1em 0;
-    flex-grow: 1;
-}
-
-.formTextArea{
-    @extend .formItem;
-    min-height: 8em;
-}
-
-.arrayItem{
-    display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: stretch;
-}
-
-.buttonItem{
-    width: 3rem;
-    height: 3rem;
-    flex-grow: 0;
-    font-size: 1.5em;
-}
-
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navitem {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .navitem:hover {
+    background-color: #333333; 
+  }
+  
+  .dropdown_container {
+    background-color: #00008B; 
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    right: 0;
+    top: 100%;
+  }
+  
+  .dropdown:hover .dropdown_container {
+    display: flex;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #00008B; 
+    color: white;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
