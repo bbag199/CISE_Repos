@@ -2,6 +2,8 @@ name: CI_action
 
 on:
   push:
+    paths:
+      - worksheet4/frontend
     branches: [main]
   pull_request:
     branches: [main]
@@ -9,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worksheet4/frontend
     strategy:
       matrix:
         node-version: [14.x]
