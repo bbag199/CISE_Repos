@@ -7,10 +7,9 @@ function UpdateBookInfo() {
   const [book, setBook] = useState<Book>(DefaultEmptyBook);
   const id = useParams<{ id: string }>().id;
   const router = useRouter();
-
   useEffect(() => {
     fetch(`http://localhost:8082/api/books/${id}`)
-    .then((res) => {
+      .then((res) => {
         return res.json();
       })
       .then((json) => {
@@ -60,7 +59,7 @@ function UpdateBookInfo() {
         <div className='col-md-8 m-auto'>
           <form noValidate onSubmit={onSubmit}>
             <div className='form-group'>
-              <label htmlFor='title'>Title</label>
+            <label htmlFor='title'>Title</label>
               <input
                 type='text'
                 placeholder='Title of the Book'
@@ -150,4 +149,3 @@ function UpdateBookInfo() {
 }
 
 export default UpdateBookInfo;
-
